@@ -75,7 +75,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="/index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
+				<h1 ><a href="/home"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
 			</div>
 			<div class="head-t">
 				<ul class="card">
@@ -109,7 +109,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li ><a href="index" class="hyper "><span>Home</span></a></li>	
+							<li ><a href="home" class="hyper "><span>Home</span></a></li>	
 							
 							<li  class="dropdown ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
@@ -261,7 +261,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div class="banner-top">
 	<div class="container">
 		<h3 >Register</h3>
-		<h4><a href="index">Home</a><label>/</label>Register</h4>
+		<h4><a href="home">Home</a><label>/</label>Register</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
@@ -355,7 +355,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
 			<ul>
-				<li><a href="index">Home</a></li>
+				<li><a href="home">Home</a></li>
 				<li><a href="kitchen">Kitchen</a></li>
 				<li><a href="care">Personal Care</a></li>
 				<li><a href="hold">Household</a></li>						 
@@ -385,7 +385,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="/index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
+				<h2 ><a href="/home"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
 				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 				<ul class="social-fo">
 					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
