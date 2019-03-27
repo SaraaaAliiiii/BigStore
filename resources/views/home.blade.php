@@ -95,7 +95,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="/home"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
+				<h1 ><a href="/index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
 			</div>
 			<div class="head-t">
 				<ul class="card">
@@ -137,7 +137,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li class=" active"><a href="/home" class="hyper "><span>Home</span></a></li>	
+							<li class=" active"><a href="/index" class="hyper "><span>Home</span></a></li>	
 							
 							<li class="dropdown ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
@@ -935,7 +935,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
 			<ul>
-				<li><a href="/home">Home</a></li>
+				<li><a href="/index">Home</a></li>
 				<li><a href="/kitchen">Kitchen</a></li>
 				<li><a href="/care">Personal Care</a></li>
 				<li><a href="/hold">Household</a></li
