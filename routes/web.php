@@ -30,7 +30,7 @@ Route::group(['middleware' => ['web','auth']], function()
 		}
 		else
 		{
-			return view('home');
+			return Redirect::to('/delete-user');
 		}
 	});
 });

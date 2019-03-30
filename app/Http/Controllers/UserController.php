@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         DB::delete('DELETE FROM users WHERE id = ?', [$id]);
         echo "User deleted successfully!";
-        echo '<a href = "/home"> Click Here </a> to go back';
+        echo '<a href = "/delete-user"> Click Here </a> to go back';
 
 
     }
