@@ -223,7 +223,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</ul>
 							</li>
 							
-							<li><a href="offer" class="hyper"><span>Offers</span></a></li>
+							
+							<li><a href="contact" class="hyper"><span>Contact Us</span></a></li>
 						</ul>
 					</div>
 					</nav>
@@ -286,7 +287,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div>
 								<form action="#" method="post">
 
-									{{ csrf_field() }}
+									<?php echo e(csrf_field()); ?>
+
 
 									<input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 									<input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">

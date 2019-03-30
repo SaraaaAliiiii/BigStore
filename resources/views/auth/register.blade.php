@@ -109,7 +109,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li ><a href="http://localhost:8000" class="hyper "><span>Home</span></a></li>	
+							<li ><a href="index" class="hyper "><span>Home</span></a></li>	
 							
 							<li  class="dropdown ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
@@ -118,10 +118,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
 			
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Water & Beverages</a></li>
+												
 												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Fruits & Vegetables</a></li>
-												<li><a href="kitchen"> <i class="fa fa-angle-right" aria-hidden="true"></i>Staples</a></li>
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Branded Food</a></li>
+											
 										
 											</ul>
 										
@@ -129,10 +128,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 										
 											<ul class="multi-column-dropdown">
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Breakfast &amp; Cereal</a></li>
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Snacks</a></li>
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Spices</a></li>
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Biscuit &amp; Cookie</a></li>
+												
 												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Sweets</a></li>
 										
 											</ul>
@@ -141,9 +137,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 										
 											<ul class="multi-column-dropdown">
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Pickle & Condiment</a></li>
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Instant Food</a></li>
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Dry Fruit</a></li>
+												
 												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Tea &amp; Coffee</a></li>
 										
 											</ul>
@@ -162,9 +156,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<div class="row">
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i> Ayurvedic </a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Baby Care</a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Cosmetics</a></li>
+												
 												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Deo & Purfumes</a></li>
 										
 											</ul>
@@ -174,9 +166,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											
 											<ul class="multi-column-dropdown">
 												<li><a href="care"> <i class="fa fa-angle-right" aria-hidden="true"></i>Hair Care </a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Oral Care</a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Personal Hygiene</a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Skin care</a></li>
+												
 										
 											</ul>
 											
@@ -185,9 +175,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											
 											<ul class="multi-column-dropdown">
 												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i> Fashion Accessories </a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Grooming Tools</a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Shaving Need</a></li>
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Sanitary Needs</a></li>
+												
 										
 											</ul>
 										</div>
@@ -204,11 +192,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<div class="row">
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Cleaning Accessories</a></li>
+												
 												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>CookWear</a></li>
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Detergents</a></li>
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Gardening Needs</a></li>
-										
+												
 											</ul>
 										
 										</div>
@@ -216,20 +202,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											
 											<ul class="multi-column-dropdown">
 												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Kitchen & Dining</a></li>
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>KitchenWear</a></li>
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Pet Care</a></li>
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Plastic Wear</a></li>
-										
+									
 											</ul>
 										
 										</div>
 										<div class="col-sm-3">
 										
 											<ul class="multi-column-dropdown">
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Pooja Needs</a></li>
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Serveware</a></li>
+												
 												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Safety Accessories</a></li>
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Festive Decoratives </a></li>
+												
 										
 											</ul>
 										</div>
@@ -241,7 +223,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</ul>
 							</li>
 							
-							<li><a href="codes" class="hyper"> <span>Codes</span></a></li>
+							<li><a href="offer" class="hyper"><span>Offers</span></a></li>
 							<li><a href="contact" class="hyper"><span>Contact Us</span></a></li>
 						</ul>
 					</div>
@@ -261,7 +243,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div class="banner-top">
 	<div class="container">
 		<h3 >Register</h3>
-		<h4><a href="http://localhost:8000">Home</a><label>/</label>Register</h4>
+		<h4><a href="index">Home</a><label>/</label>Register</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
@@ -276,7 +258,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                    <form  class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -355,7 +337,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
 			<ul>
-				<li><a href="http://localhost:8000">Home</a></li>
+				<li><a href="index">Home</a></li>
 				<li><a href="kitchen">Kitchen</a></li>
 				<li><a href="care">Personal Care</a></li>
 				<li><a href="hold">Household</a></li>						 

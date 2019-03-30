@@ -1,3 +1,25 @@
+<?php $__env->startSection('content'); ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+
+                <div class="panel-body">
+                    <?php if(session('status')): ?>
+                        <div class="alert alert-success">
+                            <?php echo e(session('status')); ?>
+
+                        </div>
+                    <?php endif; ?>
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -7,7 +29,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | offer :: w3layouts</title>
+<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template| Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -66,19 +88,26 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-<a href="offer"><img src="images/download.png" class="img-head" alt=""></a>
+<a href="/offer"><img src="images/download.png" class="img-head" alt=""></a>
 <div class="header">
 
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
+				<h1 ><a href="/index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
 			</div>
 			<div class="head-t">
 				<ul class="card">
 					<li><a href="/wishlist" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
-					<li><a href="/login" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
-					<li><a href="/register" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
+					
+					<li><a href="login"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+																						
+                                            Logout
+                                        </a>
+																				
+             <li>
 				</ul>	
 			</div>
 			
@@ -107,9 +136,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li ><a href="index" class="hyper "><span>Home</span></a></li>	
+							<li class=" active"><a href="/index" class="hyper "><span>Home</span></a></li>	
 							
-							<li  class="dropdown ">
+							<li class="dropdown ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
 								<ul class="dropdown-menu multi">
 									<div class="row">
@@ -117,8 +146,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<ul class="multi-column-dropdown">
 			
 												
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Fruits & Vegetables</a></li>
+												<li><a href="/kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Fruits & Vegetables</a></li>
+										
+										
+											</ul>
+										
+										</div>
+										<div class="col-sm-3">
+										
+											<ul class="multi-column-dropdown">
 											
+												<li><a href="/kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Sweets</a></li>
 										
 											</ul>
 										
@@ -126,22 +164,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 										
 											<ul class="multi-column-dropdown">
-							
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Sweets</a></li>
-										
-											</ul>
-										
-										</div>
-										<div class="col-sm-3">
-										
-											<ul class="multi-column-dropdown">
-												
-												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Tea &amp; Coffee</a></li>
+											
+												<li><a href="/kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Tea &amp; Coffee</a></li>
 										
 											</ul>
 										</div>
 										<div class="col-sm-3 w3l">
-											<a href="kitchen"><img src="images/me.png" class="img-responsive" alt=""></a>
+											<a href="/kitchen"><img src="images/me.png" class="img-responsive" alt=""></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>	
@@ -154,8 +183,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<div class="row">
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
-												
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Deo & Purfumes</a></li>
+                                                <li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i>Deo & Purfumes</a></li>
 										
 											</ul>
 											
@@ -163,8 +191,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 											
 											<ul class="multi-column-dropdown">
-												<li><a href="care"> <i class="fa fa-angle-right" aria-hidden="true"></i>Hair Care </a></li>
-												
+												<li><a href="/care"> <i class="fa fa-angle-right" aria-hidden="true"></i>Hair Care </a></li>
+
 										
 											</ul>
 											
@@ -172,13 +200,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 											
 											<ul class="multi-column-dropdown">
-												<li><a href="care"><i class="fa fa-angle-right" aria-hidden="true"></i> Fashion Accessories </a></li>
-												
+												<li><a href="/care"><i class="fa fa-angle-right" aria-hidden="true"></i> Fashion Accessories </a></li
 										
 											</ul>
 										</div>
 										<div class="col-sm-3 w3l">
-											<a href="care"><img src="images/me1.png" class="img-responsive" alt=""></a>
+											<a href="/care"><img src="images/me1.png" class="img-responsive" alt=""></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>	
@@ -190,18 +217,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<div class="row">
 										<div class="col-sm-3">
 											<ul class="multi-column-dropdown">
-												
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>CookWear</a></li>
-												
-										
+												<li><a href="/hold"><i class="fa fa-angle-right" aria-hidden="true"></i>CookWear</a></li>
+
 											</ul>
 										
 										</div>
 										<div class="col-sm-3">
 											
 											<ul class="multi-column-dropdown">
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Kitchen & Dining</a></li>
-												
+												<li><a href="/hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Kitchen & Dining</a></li>
+											
 										
 											</ul>
 										
@@ -209,8 +234,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 										
 											<ul class="multi-column-dropdown">
-												
-												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Safety Accessories</a></li>
+										
+												<li><a href="/hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Safety Accessories</a></li>
 												
 										
 											</ul>
@@ -224,7 +249,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</li>
 							
 							
-							<li><a href="contact" class="hyper"><span>Contact Us</span></a></li>
+							<li><a href="/contact" class="hyper"><span>Contact Us</span></a></li>
 						</ul>
 					</div>
 					</nav>
@@ -237,44 +262,49 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					
 				</div>			
 </div>
-  <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <a href="kitchen"><img class="first-slide" src="images/ba.jpg" alt="First slide"></a>
-       
-        </div>
-        <div class="item">
-          <a href="care"><img class="second-slide " src="images/ba1.jpg" alt="Second slide"></a>
-         
-        </div>
-        <div class="item">
-          <a href="hold"><img class="third-slide " src="images/ba2.jpg" alt="Third slide"></a>
-          
-        </div>
-      </div>
-    
+  <!---->
+<div data-vide-bg="video/video">
+    <div class="container">
+		<div class="banner-info">
+			<h3>It is a long established fact that a reader will be distracted by 
+			the readable </h3>	
+			<div class="search-form">
+				<form action="#" method="post">
+					<input type="text" placeholder="Search..." name="Search...">
+					<input type="submit" value=" " >
+				</form>
+			</div>		
+		</div>	
     </div>
+</div>
+
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="js/jquery.vide.min.js"></script>
+
 <!--content-->
-<div class="content-top offer-w3agile">
+<div class="content-top ">
 	<div class="container ">
 		<div class="spec ">
 			<h3>Special Offers</h3>
-							<div class="ser-t">
-					<b></b>
-					<span><i></i></span>
-					<b class="line"></b>
-				</div>
+			<div class="ser-t">
+				<b></b>
+				<span><i></i></span>
+				<b class="line"></b>
+			</div>
 		</div>
-						<div class=" con-w3l wthree-of">
-							<div class="col-md-3 pro-1">
+			<div class="tab-head ">
+				<nav class="nav-sidebar">
+					<ul class="nav tabs ">
+					  <li class="active"><a href="#tab1" data-toggle="tab">Staples</a></li>
+					  <li class=""><a href="#tab2" data-toggle="tab">Snacks</a></li> 
+					  <li class=""><a href="#tab3" data-toggle="tab">Fruits & Vegetables</a></li>  
+					  <li class=""><a href="#tab4" data-toggle="tab">Breakfast & Cereal</a></li>
+					</ul>
+				</nav>
+				<div class=" tab-content tab-content-t ">
+					<div class="tab-pane active text-style" id="tab1">
+						<div class=" con-w3l">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
 										<img src="images/of.png" class="img-responsive" alt="">
@@ -286,9 +316,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$2.00</label><em class="item_price">$1.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 										<div class="add">
@@ -298,7 +326,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal2" class="offer-img">
 										<img src="images/of1.png" class="img-responsive" alt="">
@@ -310,9 +338,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$10.00</label><em class="item_price">$9.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 												<div class="add">
@@ -321,7 +347,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal3" class="offer-img">
 										<img src="images/of2.png" class="img-responsive" alt="">
@@ -333,9 +359,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$3.00</label><em class="item_price">$2.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											 
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -344,7 +368,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal4" class="offer-img">
 										<img src="images/of3.png" class="img-responsive" alt="">
@@ -356,19 +380,21 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+										
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Mini Soya Chunks" data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Soya Chunks" data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">Add to Cart</button>
 										</div>
 									</div>
 								</div>
 							</div>
-						
-							<div class="col-md-3 pro-1">
+							<div class="clearfix"></div>
+						 </div>
+					</div>
+					<div class="tab-pane  text-style" id="tab2">
+						<div class=" con-w3l">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal5" class="offer-img">
 										<img src="images/of4.png" class="img-responsive" alt="">
@@ -380,9 +406,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$1.00</label><em class="item_price">$0.70</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -391,7 +415,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal6" class="offer-img">
 										<img src="images/of5.png" class="img-responsive" alt="">
@@ -403,9 +427,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$1.00</label><em class="item_price">$0.70</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -414,7 +436,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal7" class="offer-img">
 										<img src="images/of6.png" class="img-responsive" alt="">
@@ -426,18 +448,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$2.00</label><em class="item_price">$1.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="product 1" data-summary="summary 1" data-price="1.00" data-quantity="1" data-image="images/of6.png">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="Popcorn" data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="images/of6.png">Add to Cart</button>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal8" class="offer-img">
 										<img src="images/of7.png" class="img-responsive" alt="">
@@ -445,13 +465,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</a>
 									<div class="mid-1">
 										<div class="women">
-											<h6><a href="single"> Nuts</a>(250 g)</h6>							
+											<h6><a href="single">Nuts</a>(250 g)</h6>							
 										</div>
 										<div class="mid-2">
 											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											 
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -460,8 +478,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-md-3 pro-1">
+							<div class="clearfix"></div>
+						 </div>		  
+					</div>
+					<div class="tab-pane  text-style" id="tab3">
+						<div class=" con-w3l">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 								<a href="#" data-toggle="modal" data-target="#myModal9" class="offer-img">
 										<img src="images/of8.png" class="img-responsive" alt="">
@@ -473,9 +495,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$2.00</label><em class="item_price">$1.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -484,7 +504,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal10" class="offer-img">
 										<img src="images/of9.png" class="img-responsive" alt="">
@@ -496,9 +516,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$1.00</label><em class="item_price">$0.70</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -507,7 +525,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal11" class="offer-img">
 										<img src="images/of10.png" class="img-responsive" alt="">
@@ -519,9 +537,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$2.00</label><em class="item_price">$1.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -530,7 +546,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal12" class="offer-img">
 										<img src="images/of11.png" class="img-responsive" alt="">
@@ -542,9 +558,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											  
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -553,8 +567,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-md-3 pro-1">
+							<div class="clearfix"></div>
+						 </div>		  
+					</div>
+					<div class="tab-pane text-style" id="tab4">
+							<div class=" con-w3l">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 								<a href="#" data-toggle="modal" data-target="#myModal13" class="offer-img">
 										<img src="images/of12.png" class="img-responsive" alt="">
@@ -562,13 +580,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</a>
 									<div class="mid-1">
 										<div class="women">
-											<h6><a href="single">Honey</a>(500g)</h6>							
+											<h6><a href="single">Honey</a>(500 g)</h6>							
 										</div>
 										<div class="mid-2">
 											<p ><label>$7.00</label><em class="item_price">$6.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											  
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -577,21 +593,19 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
+							<div class="col-md-3 m-wthree">
+								<div class="col-m ">
 									<a href="#" data-toggle="modal" data-target="#myModal14" class="offer-img">
 										<img src="images/of13.png" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
 										<div class="women">
-											<h6><a href="single">Chocos</a>(250g)</h6>							
+											<h6><a href="single">Chocos</a>(250 g)</h6>							
 										</div>
 										<div class="mid-2">
 											<p ><label>$5.00</label><em class="item_price">$4.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											 
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -600,8 +614,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
+							<div class="col-md-3 m-wthree">
+								<div class="col-m ">
 									<a href="#" data-toggle="modal" data-target="#myModal15" class="offer-img">
 										<img src="images/of14.png" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
@@ -612,9 +626,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											 
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -623,7 +635,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
+							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal16" class="offer-img">
 										<img src="images/of15.png" class="img-responsive" alt="">
@@ -635,9 +647,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-2">
 											<p ><label>$1.00</label><em class="item_price">$0.80</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
@@ -650,9 +660,268 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						 </div>
 					</div>
 				</div>
-			
+			</div>
+		
+	</div>
+	</div>
+	</div>
 
+<!--content-->
+<div class="content-mid">
+	<div class="container">
+		
+		<div class="col-md-4 m-w3ls">
+			<div class="col-md1 ">
+				<a href="kitchen">
+					<img src="images/co1.jpg" class="img-responsive img" alt="">
+					<div class="big-sa">
+						<h6>New Collections</h6>
+						<h3>Season<span>ing </span></h3>
+						<p>There are many variations of passages of Lorem Ipsum available, but the majority </p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-4 m-w3ls1">
+			<div class="col-md ">
+				<a href="hold">
+					<img src="images/co.jpg" class="img-responsive img" alt="">
+					<div class="big-sale">
+						<div class="big-sale1">
+							<h3>Big <span>Sale</span></h3>
+							<p>It is a long established fact that a reader </p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-4 m-w3ls">
+			<div class="col-md2 ">
+				<a href="kitchen">
+					<img src="images/co2.jpg" class="img-responsive img1" alt="">
+					<div class="big-sale2">
+						<h3>Cooking <span>Oil</span></h3>
+						<p>It is a long established fact that a reader </p>		
+					</div>
+				</a>
+			</div>
+			<div class="col-md3 ">
+				<a href="hold">
+					<img src="images/co3.jpg" class="img-responsive img1" alt="">
+					<div class="big-sale3">
+						<h3>Vegeta<span>bles</span></h3>
+						<p>It is a long established fact that a reader </p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!--content-->
+  <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+         <a href="kitchen"> <img class="first-slide" src="images/ba.jpg" alt="First slide"></a>
+       
+        </div>
+        <div class="item">
+         <a href="care"> <img class="second-slide " src="images/ba1.jpg" alt="Second slide"></a>
+         
+        </div>
+        <div class="item">
+          <a href="hold"><img class="third-slide " src="images/ba2.jpg" alt="Third slide"></a>
+          
+        </div>
+      </div>
+    
+    </div><!-- /.carousel -->
 
+<!--content-->
+	<div class="product">
+		<div class="container">
+			<div class="spec ">
+				<h3>Special Offers</h3>
+				<div class="ser-t">
+					<b></b>
+					<span><i></i></span>
+					<b class="line"></b>
+				</div>
+			</div>
+				<div class=" con-w3l">
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+								<a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+										<img src="images/of16.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single">Moisturiser</a>(500 g)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$7.00</label><em class="item_price">$6.00</em></p>
+											 
+											<div class="clearfix"></div>
+										</div>
+											<div class="add add-2">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of16.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+									<a href="#" data-toggle="modal" data-target="#myModal18" class="offer-img">
+										<img src="images/of17.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single">  Lady Finger</a>(250 g)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$5.00</label><em class="item_price">$4.50</em></p>
+											
+											<div class="clearfix"></div>
+										</div>
+											<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of17.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+									<a href="#" data-toggle="modal" data-target="#myModal19" class="offer-img">
+										<img src="images/of18.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single"> Ribbon</a>(1 pc)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
+											
+											<div class="clearfix"></div>
+										</div>
+											<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of18.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+									<a href="#" data-toggle="modal" data-target="#myModal20" class="offer-img">
+										<img src="images/of19.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single">Grapes</a>(500 g)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$1.00</label><em class="item_price">$0.80</em></p>
+											
+											<div class="clearfix"></div>
+										</div>
+											<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of19.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+								<a href="#" data-toggle="modal" data-target="#myModal21" class="offer-img">
+										<img src="images/of20.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single">Clips</a>(1 pack)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$7.00</label><em class="item_price">$6.00</em></p>
+											
+											<div class="clearfix"></div>
+										</div>
+											<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of20.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+									<a href="#" data-toggle="modal" data-target="#myModal22" class="offer-img">
+										<img src="images/of21.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single">Conditioner</a>(250 g)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$5.00</label><em class="item_price">$4.50</em></p>
+											
+											<div class="clearfix"></div>
+										</div>
+											<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of21.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+									<a href="#" data-toggle="modal" data-target="#myModal23" class="offer-img">
+										<img src="images/of22.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single">Cleaner</a>(250 kg)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
+											 
+											<div class="clearfix"></div>
+										</div>
+											<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of22.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 pro-1">
+								<div class="col-m">
+									<a href="#" data-toggle="modal" data-target="#myModal24" class="offer-img">
+										<img src="images/of23.png" class="img-responsive" alt="">
+									</a>
+									<div class="mid-1">
+										<div class="women">
+											<h6><a href="single">Gel</a>(150 g)</h6>							
+										</div>
+										<div class="mid-2">
+											<p ><label>$1.00</label><em class="item_price">$0.80</em></p>
+											 
+											<div class="clearfix"></div>
+										</div>
+											<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of23.png">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						 </div>
+		</div>
+	</div>
 <!--footer-->
 <div class="footer">
 	<div class="container">
@@ -668,8 +937,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<li><a href="/index">Home</a></li>
 				<li><a href="/kitchen">Kitchen</a></li>
 				<li><a href="/care">Personal Care</a></li>
-				<li><a href="/hold">Household</a></li>						 
-				<li><a href="/codes">Short Codes</a></li> 
+				<li><a href="/hold">Household</a></li
 				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</div>
@@ -677,8 +945,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<h3>Customer Services</h3>
 			<ul>
 				<li><a href="/shipping">Shipping</a></li>
-				<li><a href="/terms">Terms & Conditions</a></li>
-				<li><a href="/faqs">Faqs</a></li>
+				<li><a href="/terms">Terms & Conditions</a></li
 				<li><a href="/contact">Contact</a></li>
 				<li><a href="/offer">Online Shopping</a></li>						 
 				 
@@ -690,12 +957,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<li><a href="/login">Login</a></li>
 				<li><a href="/register">Register</a></li>
 				<li><a href="/wishlist">Wishlist</a></li>
-				
 			</ul>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
+				<h2 ><a href="/index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
 				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 				<ul class="social-fo">
 					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -784,7 +1050,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   });
   </script>
   
- <!-- product -->
+  <!-- product -->
 			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content modal-info">
@@ -1296,5 +1562,262 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						</div>
 					</div>
 				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of16.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Moisturiser(500 g)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="17" data-name="Moisturiser" data-summary="summary 17" data-price="0.80" data-quantity="1" data-image="images/of16.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of17.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Lady Finger(250 g)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="18" data-name="Lady Finger" data-summary="summary 18" data-price="0.80" data-quantity="1" data-image="images/of17.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal19" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of18.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Satin Ribbon Red(1 pc)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="19" data-name="Satin Ribbon Red" data-summary="summary 19" data-price="0.80" data-quantity="1" data-image="images/of18.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal20" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of19.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Grapes(500 g)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="20" data-name="Grapes" data-summary="summary 20" data-price="0.80" data-quantity="1" data-image="images/of19.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal21" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of20.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Clips(1 pack)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="21" data-name="Clips" data-summary="summary 21" data-price="0.80" data-quantity="1" data-image="images/of20.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal22" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of21.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Conditioner</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="22" data-name="Conditioner" data-summary="summary 22" data-price="0.80" data-quantity="1" data-image="images/of21.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal23" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of22.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Cleaner(250 kg)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="23" data-name="Cleaner" data-summary="summary 23" data-price="0.80" data-quantity="1" data-image="images/of22.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- product -->
+			<div class="modal fade" id="myModal24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="images/of23.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Gel(150 g)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="24" data-name="Gel" data-summary="summary 24" data-price="0.80" data-quantity="1" data-image="images/of23.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
 </body>
 </html>
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,3 +1,4 @@
+<?php $__env->startSection('content'); ?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -7,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Register :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -77,8 +78,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="head-t">
 				<ul class="card">
 					<li><a href="/wishlist" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
-					<li><a href="/login" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
-					<li><a href="/register" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
+					<li><a href="/login" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>					
 				</ul>		
 			</div>
 			
@@ -105,7 +105,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						
 
 					</div> 
-						<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
 							<li ><a href="http://localhost:8000" class="hyper "><span>Home</span></a></li>	
 							
@@ -126,7 +126,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										<div class="col-sm-3">
 										
 											<ul class="multi-column-dropdown">
-							
+												
 												<li><a href="kitchen"><i class="fa fa-angle-right" aria-hidden="true"></i>Sweets</a></li>
 										
 											</ul>
@@ -193,7 +193,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 												
 												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>CookWear</a></li>
 												
-										
 											</ul>
 										
 										</div>
@@ -201,8 +200,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											
 											<ul class="multi-column-dropdown">
 												<li><a href="hold"><i class="fa fa-angle-right" aria-hidden="true"></i>Kitchen & Dining</a></li>
-												
-										
+									
 											</ul>
 										
 										</div>
@@ -223,7 +221,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</ul>
 							</li>
 							
-							<li><a href="offer" class="hyper"><span>Offers</span></a></li>
+						
+							<li><a href="contact" class="hyper"><span>Contact Us</span></a></li>
 						</ul>
 					</div>
 					</nav>
@@ -238,144 +237,93 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </div>
   <!---->
 
- <!--banner-->
+     <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h3 >Contact</h3>
-		<h4><a href="/index">Home</a><label>/</label>Contact</h4>
+		<h3 >Register</h3>
+		<h4><a href="http://localhost:8000">Home</a><label>/</label>Register</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
 
-<!-- contact -->
-<div class="contact">
-	<div class="container">
-		<div class="spec ">
-			<h3>Contact</h3>
-				<div class="ser-t">
-					<b></b>
-					<span><i></i></span>
-					<b class="line"></b>
-				</div>
+<!--login-->
+
+	<div class="login">
+   
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+               
+
+                <div class="panel-body">
+                    <form  class="form-horizontal" method="POST" action="<?php echo e(route('register')); ?>">
+                        <?php echo e(csrf_field()); ?>
+
+
+                        <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>">
+                            <label for="name" class="col-md-4 control-label">Name</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="name" value="<?php echo e(old('name')); ?>" required autofocus>
+
+                                <?php if($errors->has('name')): ?>
+                                    <span class="help-block">
+                                        <strong><?php echo e($errors->first('name')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="<?php echo e(old('email')); ?>" required>
+
+                                <?php if($errors->has('email')): ?>
+                                    <span class="help-block">
+                                        <strong><?php echo e($errors->first('email')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group<?php echo e($errors->has('password') ? ' has-error' : ''); ?>">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                                <?php if($errors->has('password')): ?>
+                                    <span class="help-block">
+                                        <strong><?php echo e($errors->first('password')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 		</div>
-		<div class=" contact-w3">	
-			<div class="col-md-5 contact-right">	
-				<img src="images/cac.jpg" class="img-responsive" alt="">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2482.432383990807!2d0.028213999961443994!3d51.52362882484525!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1423469959819" style="border:0"></iframe>
-			</div>
-			<div class="col-md-7 contact-left">
-				<h4>Contact Information</h4>
-				<p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
-				aut odit aut fugit, sed quia consequuntur magni dolores eos
-				qui ratione voluptatem sequi nesciunt. Neque porro quisquam 
-				est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
-				<ul class="contact-list">
-					<li> <i class="fa fa-map-marker" aria-hidden="true"></i> 756 Global Place, New York.</li>
-					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com">mail@example.com</a></li>
-					<li> <i class="fa fa-phone" aria-hidden="true"></i>+123 2222 222</li>
-				</ul>
-				<div id="container">
-					<!--Horizontal Tab-->
-					<div id="parentHorizontalTab">
-						<ul class="resp-tabs-list hor_1">
-							<li><i class="fa fa-envelope" aria-hidden="true"></i></li>
-							<li> <i class="fa fa-map-marker" aria-hidden="true"></i> </span></li>
-							<li> <i class="fa fa-phone" aria-hidden="true"></i></li>
-						</ul>
-						<div class="resp-tabs-container hor_1">
-							<div>
-								<form action="#" method="post">
-
-									{{ csrf_field() }}
-
-									<input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-									<input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-									<textarea name="Message..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-									<input type="submit" value="Submit" >
-								</form>
-							</div>
-							<div>
-								<div class="map-grid">
-								<h5>Our Branches</h5>
-									<ul>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 Global Place, New York.</li>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 global Place, New York.</li>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-									</ul>
-								</div>
-							</div>
-							<div>
-								<div class="map-grid">
-									<h5>Contact Me Through</h5>
-									<ul>
-										<li>Mobile No : +123 456 7890</li>
-										<li>Office No : +123 222 2222</li>
-										<li>Home No : +123 456 7890</li>
-										<li>Fax No : +123 456 7890</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<!--Plug-in Initialisation-->
-				<script type="text/javascript">
-				$(document).ready(function() {
-					//Horizontal Tab
-					$('#parentHorizontalTab').easyResponsiveTabs({
-						type: 'default', //Types: default, vertical, accordion
-						width: 'auto', //auto or any width like 600px
-						fit: true, // 100% fit in a container
-						tabidentify: 'hor_1', // The tab groups identifier
-						activate: function(event) { // Callback function if tab is switched
-							var $tab = $(this);
-							var $info = $('#nested-tabInfo');
-							var $name = $('span', $info);
-							$name.text($tab.text());
-							$info.show();
-						}
-					});
-
-					// Child Tab
-					$('#ChildVerticalTab_1').easyResponsiveTabs({
-						type: 'vertical',
-						width: 'auto',
-						fit: true,
-						tabidentify: 'ver_1', // The tab groups identifier
-						activetab_bg: '#fff', // background color for active tabs in this group
-						inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
-						active_border_color: '#c1c1c1', // border color for active tabs heads in this group
-						active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
-					});
-
-					//Vertical Tab
-					$('#parentVerticalTab').easyResponsiveTabs({
-						type: 'vertical', //Types: default, vertical, accordion
-						width: 'auto', //auto or any width like 600px
-						fit: true, // 100% fit in a container
-						closed: 'accordion', // Start closed if in accordion view
-						tabidentify: 'hor_1', // The tab groups identifier
-						activate: function(event) { // Callback function if tab is switched
-							var $tab = $(this);
-							var $info = $('#nested-tabInfo2');
-							var $name = $('span', $info);
-							$name.text($tab.text());
-							$info.show();
-						}
-					});
-				});
-			</script>
-				
-			</div>
-			
-		<div class="clearfix"></div>
-	</div>
-	</div>
-</div>
-<!-- //contact -->
-
 <!--footer-->
 <div class="footer">
 	<div class="container">
@@ -388,12 +336,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>
 			<ul>
-				<li><a href="/index">Home</a></li>
-				<li><a href="/kitchen">Kitchen</a></li>
-				<li><a href="/care">Personal Care</a></li>
-				<li><a href="/hold">Household</a></li>						 
-				<li><a href="/codes">Short Codes</a></li> 
-				<li><a href=/"contact">Contact</a></li>
+				<li><a href="http://localhost:8000">Home</a></li>
+				<li><a href="kitchen">Kitchen</a></li>
+				<li><a href="care">Personal Care</a></li>
+				<li><a href="hold">Household</a></li>						 
+				<li><a href="codes">Short Codes</a></li> 
+				<li><a href="contact">Contact</a></li>
 			</ul>
 		</div>
 		<div class="col-md-3 footer-grid ">
@@ -418,7 +366,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
+				<h2 ><a href="/index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
 				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 				<ul class="social-fo">
 					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -446,18 +394,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>
 </div>
 <!-- //footer-->
-<!-- tabs -->
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#horizontalTab').easyResponsiveTabs({
-			type: 'default', //Types: default, vertical, accordion           
-			width: 'auto', //auto or any width like 600px
-			fit: true   // 100% fit in a container
-			});
-		});				
-	</script>
-<!-- //tabs -->
 <!-- smooth scrolling -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -518,6 +454,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   });
   </script>
 
-  
 </body>
 </html>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

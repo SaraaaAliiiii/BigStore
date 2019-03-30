@@ -15,6 +15,8 @@
 
 Auth::routes();
 
+
+
 Route::group(['middleware' => ['web','auth']], function()
 {
 
@@ -22,6 +24,7 @@ Route::group(['middleware' => ['web','auth']], function()
 	{
     	return view('home');
 	});	
+
 	Route::get('/', function()
 	{
 		if(Auth::user()->admin == 0)
@@ -37,3 +40,22 @@ Route::group(['middleware' => ['web','auth']], function()
 
 Route::get('/delete-user','UserController@index');
 Route::get('/delete-user/{id}','UserController@destroy');
+
+Route::get('/wishlist', 'WishlistController@create');
+Route::get('/index', 'IndexController@create');
+Route::get('/kitchen', 'KitchenController@create');
+Route::get('/offer', 'OfferController@create');
+
+//Route::get('/contact',['uses' => 'ContactMessageController@create']);
+
+Route::get('contact', 'ContactMessageController@create');
+Route::post('contact', 'ContactMessageController@mail');
+
+
+
+
+
+
+
+
+

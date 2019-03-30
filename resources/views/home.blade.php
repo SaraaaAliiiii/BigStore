@@ -249,7 +249,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</ul>
 							</li>
 							
-							
+							<li><a href="offer" class="hyper"><span>Offers</span></a></li>
 							<li><a href="/contact" class="hyper"><span>Contact Us</span></a></li>
 						</ul>
 					</div>

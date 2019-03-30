@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | About :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -79,7 +79,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<li><a href="/wishlist" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
 					<li><a href="/login" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
 					<li><a href="/register" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
-				</ul>		
+				</ul>	
 			</div>
 			
 			<div class="header-ri">
@@ -105,9 +105,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						
 
 					</div> 
-						<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+	<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li ><a href="http://localhost:8000" class="hyper "><span>Home</span></a></li>	
+							<li ><a href="index" class="hyper "><span>Home</span></a></li>	
 							
 							<li  class="dropdown ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
@@ -223,7 +223,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</ul>
 							</li>
 							
-							<li><a href="offer" class="hyper"><span>Offers</span></a></li>
+							
+							<li><a href="contact" class="hyper"><span>Contact Us</span></a></li>
 						</ul>
 					</div>
 					</nav>
@@ -238,143 +239,145 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </div>
   <!---->
 
- <!--banner-->
+   <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h3 >Contact</h3>
-		<h4><a href="/index">Home</a><label>/</label>Contact</h4>
+		<h3 >Wishlist</h3>
+		<h4><a href="index">Home</a><label>/</label>Wishlist</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
 
-<!-- contact -->
-<div class="contact">
-	<div class="container">
-		<div class="spec ">
-			<h3>Contact</h3>
-				<div class="ser-t">
-					<b></b>
-					<span><i></i></span>
-					<b class="line"></b>
-				</div>
-		</div>
-		<div class=" contact-w3">	
-			<div class="col-md-5 contact-right">	
-				<img src="images/cac.jpg" class="img-responsive" alt="">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2482.432383990807!2d0.028213999961443994!3d51.52362882484525!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1423469959819" style="border:0"></iframe>
-			</div>
-			<div class="col-md-7 contact-left">
-				<h4>Contact Information</h4>
-				<p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
-				aut odit aut fugit, sed quia consequuntur magni dolores eos
-				qui ratione voluptatem sequi nesciunt. Neque porro quisquam 
-				est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
-				<ul class="contact-list">
-					<li> <i class="fa fa-map-marker" aria-hidden="true"></i> 756 Global Place, New York.</li>
-					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com">mail@example.com</a></li>
-					<li> <i class="fa fa-phone" aria-hidden="true"></i>+123 2222 222</li>
-				</ul>
-				<div id="container">
-					<!--Horizontal Tab-->
-					<div id="parentHorizontalTab">
-						<ul class="resp-tabs-list hor_1">
-							<li><i class="fa fa-envelope" aria-hidden="true"></i></li>
-							<li> <i class="fa fa-map-marker" aria-hidden="true"></i> </span></li>
-							<li> <i class="fa fa-phone" aria-hidden="true"></i></li>
-						</ul>
-						<div class="resp-tabs-container hor_1">
-							<div>
-								<form action="#" method="post">
-
-									{{ csrf_field() }}
-
-									<input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-									<input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-									<textarea name="Message..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-									<input type="submit" value="Submit" >
-								</form>
-							</div>
-							<div>
-								<div class="map-grid">
-								<h5>Our Branches</h5>
-									<ul>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 Global Place, New York.</li>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 global Place, New York.</li>
-										<li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-									</ul>
-								</div>
-							</div>
-							<div>
-								<div class="map-grid">
-									<h5>Contact Me Through</h5>
-									<ul>
-										<li>Mobile No : +123 456 7890</li>
-										<li>Office No : +123 222 2222</li>
-										<li>Home No : +123 456 7890</li>
-										<li>Fax No : +123 456 7890</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+	<!-- contact -->
+		<div class="check-out">	 
+		<div class="container">	 
+	 <div class="spec ">
+				<h3>Wishlist</h3>
+					<div class="ser-t">
+						<b></b>
+						<span><i></i></span>
+						<b class="line"></b>
 					</div>
-				</div>
-				
-				<!--Plug-in Initialisation-->
-				<script type="text/javascript">
-				$(document).ready(function() {
-					//Horizontal Tab
-					$('#parentHorizontalTab').easyResponsiveTabs({
-						type: 'default', //Types: default, vertical, accordion
-						width: 'auto', //auto or any width like 600px
-						fit: true, // 100% fit in a container
-						tabidentify: 'hor_1', // The tab groups identifier
-						activate: function(event) { // Callback function if tab is switched
-							var $tab = $(this);
-							var $info = $('#nested-tabInfo');
-							var $name = $('span', $info);
-							$name.text($tab.text());
-							$info.show();
-						}
-					});
-
-					// Child Tab
-					$('#ChildVerticalTab_1').easyResponsiveTabs({
-						type: 'vertical',
-						width: 'auto',
-						fit: true,
-						tabidentify: 'ver_1', // The tab groups identifier
-						activetab_bg: '#fff', // background color for active tabs in this group
-						inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
-						active_border_color: '#c1c1c1', // border color for active tabs heads in this group
-						active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
-					});
-
-					//Vertical Tab
-					$('#parentVerticalTab').easyResponsiveTabs({
-						type: 'vertical', //Types: default, vertical, accordion
-						width: 'auto', //auto or any width like 600px
-						fit: true, // 100% fit in a container
-						closed: 'accordion', // Start closed if in accordion view
-						tabidentify: 'hor_1', // The tab groups identifier
-						activate: function(event) { // Callback function if tab is switched
-							var $tab = $(this);
-							var $info = $('#nested-tabInfo2');
-							var $name = $('span', $info);
-							$name.text($tab.text());
-							$info.show();
-						}
-					});
-				});
-			</script>
-				
 			</div>
+				<script>$(document).ready(function(c) {
+					$('.close1').on('click', function(c){
+						$('.cross').fadeOut('slow', function(c){
+							$('.cross').remove();
+						});
+						});	  
+					});
+			   </script>
+			<script>$(document).ready(function(c) {
+					$('.close2').on('click', function(c){
+						$('.cross1').fadeOut('slow', function(c){
+							$('.cross1').remove();
+						});
+						});	  
+					});
+			   </script>	
+			   <script>$(document).ready(function(c) {
+					$('.close3').on('click', function(c){
+						$('.cross2').fadeOut('slow', function(c){
+							$('.cross2').remove();
+						});
+						});	  
+					});
+			   </script>	
+ <table class="table ">
+		  <tr>
+			<th class="t-head head-it ">Products</th>
+			<th class="t-head">Price</th>
+		<th class="t-head">Quantity</th>
+
+			<th class="t-head">Purchase</th>
+		  </tr>
+		  <tr class="cross">
+			<td class="ring-in t-data">
+				<a href="single" class="at-in">
+					<img src="images/wi.png" class="img-responsive" alt="">
+				</a>
+			<div class="sed">
+				<h5>Sed ut perspiciatis unde</h5>
+			</div>
+				<div class="clearfix"> </div>
+				<div class="close1"> <i class="fa fa-times" aria-hidden="true"></i></div>
+			 </td>
+			<td class="t-data">$10.00</td>
+			<td class="t-data"><div class="quantity"> 
+								<div class="quantity-select">            
+									<div class="entry value-minus">&nbsp;</div>
+										<div class="entry value"><span class="span-1">1</span></div>									
+									<div class="entry value-plus active">&nbsp;</div>
+								</div>
+							</div>
 			
-		<div class="clearfix"></div>
-	</div>
-	</div>
-</div>
-<!-- //contact -->
+			</td>
+
+			<td class="t-data t-w3l"><a class=" add-1" href="single">Add To Cart</a></td>
+			
+		  </tr>
+		  <tr class="cross1">
+		  <td class="t-data ring-in"><a href="single" class="at-in"><img src="images/wi1.png" class="img-responsive" alt=""></a>
+			<div class="sed">
+				<h5>Sed ut perspiciatis unde</h5>
+			</div>
+			<div class="clearfix"> </div>
+							<div class="close2"> <i class="fa fa-times" aria-hidden="true"></i></div>
+</td>
+			<td class="t-data">$20.00</td>
+		<td class="t-data"><div class="quantity"> 
+								<div class="quantity-select">            
+									<div class="entry value-minus">&nbsp;</div>
+										<div class="entry value"><span class="span-1">1</span></div>									
+									<div class="entry value-plus active">&nbsp;</div>
+								</div>
+							</div>
+			
+			</td>
+
+			<td class="t-data t-w3l"><a class=" add-1" href="single">Add To Cart</a></td>
+			
+		  </tr>
+		  <tr class="cross2">
+		  <td class="t-data ring-in"><a href="single" class="at-in"><img src="images/wi2.png" class="img-responsive" alt=""></a>
+			<div class="sed">
+				<h5>Sed ut perspiciatis unde</h5>
+			</div>
+			<div class="clearfix"> </div>
+				<div class="close3"> <i class="fa fa-times" aria-hidden="true"></i></div>
+			</td>
+			<td class="t-data">$15.00</td>
+			<td class="t-data"><div class="quantity"> 
+								<div class="quantity-select">            
+									<div class="entry value-minus">&nbsp;</div>
+										<div class="entry value"><span class="span-1">1</span></div>									
+									<div class="entry value-plus active">&nbsp;</div>
+								</div>
+							</div>
+			
+			</td>
+
+			<td class="t-data"><a class=" add-1" href="single">Add To Cart</a></td>
+			
+		  </tr>
+	</table>
+		 </div>
+		 </div>
+		 				
+	<!--quantity-->
+			<script>
+			$('.value-plus').on('click', function(){
+				var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+				divUpd.text(newVal);
+			});
+
+			$('.value-minus').on('click', function(){
+				var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+				if(newVal>=1) divUpd.text(newVal);
+			});
+			</script>
+			<!--quantity-->
+			
 
 <!--footer-->
 <div class="footer">
@@ -393,7 +396,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<li><a href="/care">Personal Care</a></li>
 				<li><a href="/hold">Household</a></li>						 
 				<li><a href="/codes">Short Codes</a></li> 
-				<li><a href=/"contact">Contact</a></li>
+				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</div>
 		<div class="col-md-3 footer-grid ">
@@ -418,7 +421,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
+				<h2 ><a href="/index"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
 				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 				<ul class="social-fo">
 					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -446,18 +449,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>
 </div>
 <!-- //footer-->
-<!-- tabs -->
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#horizontalTab').easyResponsiveTabs({
-			type: 'default', //Types: default, vertical, accordion           
-			width: 'auto', //auto or any width like 600px
-			fit: true   // 100% fit in a container
-			});
-		});				
-	</script>
-<!-- //tabs -->
 <!-- smooth scrolling -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -518,6 +509,5 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   });
   </script>
 
-  
 </body>
 </html>
