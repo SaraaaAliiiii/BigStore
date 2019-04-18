@@ -52,10 +52,6 @@ Route::get('contact', 'ContactMessageController@create');
 Route::post('contact', 'ContactMessageController@mail');
 
 
-
-
-
-
-
+Route::resource('products','ProductsController');
 
 
