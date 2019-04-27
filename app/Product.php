@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    // Table Name
-    protected $table = 'products';
-    // Primary Key
-    public $primaryKey = 'id';
+    protected $table ='products';
+    public $primarykey='id';
+
+public $timestamp =true;
+    protected $products;
+    protected $product;
+
 }

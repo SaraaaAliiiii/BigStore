@@ -15,7 +15,7 @@ class UserController extends Controller
         $users = DB::select('SELECT * FROM users'); 
         return view('users.index')->with('users',$users);
     }
-
+   
     public function destroy($id)
     {
         DB::delete('DELETE FROM users WHERE id = ?', [$id]);
