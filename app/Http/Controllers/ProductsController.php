@@ -159,7 +159,9 @@ public function updateCart(Request $request)
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view('products.edit')->with('product',$product);
+
     }
 
     /**
@@ -171,7 +173,21 @@ public function updateCart(Request $request)
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $this->validate($request,
+    [
+        'name' => 'required',
+        'description' => 'required',
+        'price' => 'required'
+    ]);
+       $product = Product::find($id);
+       $product->name= $request->input('name');
+       $product->description= $request->input('description');
+       $product->price= $request->input('price');
+       $product->save();
+
+       return redirect('/products')->with('success','Product Updated');
+
     }
 
     /**
@@ -182,6 +198,8 @@ public function updateCart(Request $request)
      */
     public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        $product->delete();
+        return redirect('/products')->with('success','Product Removed');
     }
 }

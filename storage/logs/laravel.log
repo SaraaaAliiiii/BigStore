@@ -1766,3 +1766,15 @@ Did you mean this?
 #58 C:\\Users\\SARA ALI\\Desktop\\BigStore\\server.php(21): require_once('C:\\\\Users\\\\SARA A...')
 #59 {main}
 "} 
+[2019-04-28 01:26:05] local.ERROR: Class 'Collective\Html\HtmlServiceProvider' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Collective\\Html\\HtmlServiceProvider' not found at G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Collective\\\\Html...')
+#1 G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(561): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(213): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(296): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 G:\\BigStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(119): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 G:\\BigStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
